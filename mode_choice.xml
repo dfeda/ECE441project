@@ -14,19 +14,19 @@
         android:text="Select Running Mode:"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="202dp" />
+        tools:layout_editor_absoluteY="126dp" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Autonomous"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintHorizontal_bias="0.911"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="274dp" />
+        tools:layout_editor_absoluteY="181dp" />
 
     <Button
         android:id="@+id/button2"
@@ -34,6 +34,7 @@
         android:layout_height="wrap_content"
         android:text="Controlled"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.816"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="364dp" />
+        tools:layout_editor_absoluteY="181dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
