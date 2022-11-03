@@ -38,7 +38,7 @@
         android:layout_width="363dp"
         android:layout_height="241dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.543"
+        app:layout_constraintHorizontal_bias="0.54"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logOutInControlled"
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
@@ -47,7 +47,7 @@
         android:id="@+id/autonomousButtonInControlled"
         android:layout_width="378dp"
         android:layout_height="56dp"
-        android:text="@string/change_to_remote_mode"
+        android:text="@string/change_to_autonomous_mode"
         android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

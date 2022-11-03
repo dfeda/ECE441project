@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 
+import java.util.Objects;
+
 public class ModeChoiceActivity extends AppCompatActivity {
     private Button autonomousButton;
     private Button controlledButton;
@@ -16,6 +18,8 @@ public class ModeChoiceActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        Objects.requireNonNull(getSupportActionBar()).hide();
         setContentView(R.layout.activity_mode_choice);
 
         autonomousButton = (Button) findViewById(R.id.autonomousButton);
