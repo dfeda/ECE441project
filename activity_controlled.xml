@@ -35,48 +35,59 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="363dp"
-        android:layout_height="241dp"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.6"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logOutInControlled"
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
     <Button
         android:id="@+id/autonomousButtonInControlled"
-        android:layout_width="378dp"
-        android:layout_height="56dp"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#673AB7"
         android:text="@string/change_to_autonomous_mode"
         android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.5" />
 
     <Button
         android:id="@+id/logOutInControlled"
-        android:layout_width="353dp"
-        android:layout_height="56dp"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#F44336"
         android:text="@string/log_out"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.5" />
 
     <ImageButton
         android:id="@+id/imageButton2"
         android:layout_width="60dp"
         android:layout_height="55dp"
-        android:layout_marginBottom="24dp"
         android:rotation="180"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton9"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton9"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/autonomousButtonInControlled"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="60dp"
         android:layout_height="55dp"
-        android:layout_marginEnd="80dp"
         app:layout_constraintBottom_toTopOf="@+id/imageButton2"
         app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/autonomousButtonInControlled"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@android:drawable/arrow_up_float" />
@@ -85,9 +96,9 @@
         android:id="@+id/imageButton3"
         android:layout_width="60dp"
         android:layout_height="55dp"
-        android:layout_marginEnd="76dp"
+        android:layout_marginStart="10dp"
         android:rotation="270"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageButton4"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
@@ -95,8 +106,9 @@
         android:id="@+id/imageButton4"
         android:layout_width="60dp"
         android:layout_height="55dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginEnd="10dp"
         android:rotation="90"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageButton3"
@@ -107,20 +119,18 @@
         android:id="@+id/imageButton9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="84dp"
-        android:layout_marginBottom="128dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@android:drawable/ic_lock_silent_mode_off" />
 
     <ImageButton
         android:id="@+id/imageButton10"
         android:layout_width="66dp"
         android:layout_height="51dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginBottom="112dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
         app:srcCompat="@android:drawable/ic_lock_idle_alarm" />
 
     <ProgressBar
@@ -128,22 +138,34 @@
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="155dp"
         android:layout_height="14dp"
-        android:layout_marginStart="84dp"
         android:progress="20"
         app:layout_constraintBottom_toTopOf="@+id/progressBar2"
-        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="71dp"
-        android:layout_height="57dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginBottom="16dp"
-        android:text="Sensors(f, b, l, r)"
-        android:textAlignment="textEnd"
-        android:textSize="10sp"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:text="@string/sensors"
+        android:textAlignment="center"
+        android:textColor="#673AB7"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/imageButton9"
+        app:layout_constraintStart_toStartOf="@+id/imageButton9"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton9" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:text="@string/f_b_l_r"
+        android:textAlignment="center"
+        android:textColor="#673AB7"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 </androidx.constraintlayout.widget.ConstraintLayout>

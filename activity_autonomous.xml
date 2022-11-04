@@ -7,8 +7,10 @@
 
     <Button
         android:id="@+id/logOutInAutonomous"
-        android:layout_width="344dp"
-        android:layout_height="42dp"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.5"
+        android:layout_height="50dp"
         android:backgroundTint="#F44336"
         android:text="@string/log_out"
         app:layout_constraintEnd_toEndOf="parent"
@@ -16,38 +18,44 @@
 
     <Button
         android:id="@+id/controlledButtonInAutonomous"
-        android:layout_width="387dp"
-        android:layout_height="42dp"
-        android:backgroundTint="#9C27B0"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.5"
+        android:layout_height="50dp"
+        android:backgroundTint="#673AB7"
         android:text="@string/switch_to_controlled"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageButton"
-        android:layout_width="433dp"
-        android:layout_height="210dp"
-        android:layout_marginStart="148dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/controlledButtonInAutonomous"
-        tools:srcCompat="@drawable/sampleimage" />
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.6"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
     <ImageButton
         android:id="@+id/imageButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginBottom="100dp"
         android:backgroundTint="#3F51B5"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@android:drawable/ic_lock_silent_mode_off" />
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="639dp"
-        android:layout_height="42dp"
-        android:layout_marginBottom="16dp"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="1"
+        android:layout_height="50dp"
         android:backgroundTint="#FFC107"
         android:text="@string/sensor_detected_object"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -58,20 +66,22 @@
         android:id="@+id/imageButton3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="60dp"
-        android:layout_marginBottom="100dp"
         android:backgroundTint="#FFC107"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButton"
         app:srcCompat="@android:drawable/ic_lock_idle_low_battery" />
 
     <TextView
         android:id="@+id/editTextTextPersonName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="280dp"
         android:ems="10"
         android:text="@string/live_view"
+        android:textAlignment="center"
+        android:textColor="#673AB7"
         app:layout_constraintBottom_toTopOf="@+id/button3"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton" />
 </androidx.constraintlayout.widget.ConstraintLayout>
