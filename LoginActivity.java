@@ -23,7 +23,7 @@ public class LoginActivity extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         Objects.requireNonNull(getSupportActionBar()).hide();
-        setContentView(R.layout.login);
+        setContentView(R.layout.activity_login);
 
         userUsername = (EditText) findViewById(R.id.userUsername);
         userPassword = (EditText) findViewById(R.id.userPassword);
