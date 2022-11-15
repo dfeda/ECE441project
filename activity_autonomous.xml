@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/logOutInAutonomous"
+        android:id="@+id/logoutButtonInAutonomous"
         android:layout_width="0dp"
         app:layout_constraintWidth_default="percent"
         app:layout_constraintWidth_percent="0.5"

@@ -9,40 +9,47 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
+        android:screenOrientation="landscape"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light"
-        android:screenOrientation="landscape"
         tools:targetApi="31">
         <activity
-            android:name=".ControlledActivity"
-            android:screenOrientation="landscape"
-            android:exported="false">
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:screenOrientation="landscape">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
 
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ControlledActivity"
+            android:exported="false"
+            android:screenOrientation="landscape">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".AutonomousActivity"
-            android:screenOrientation="landscape"
-            android:exported="false">
-
+            android:exported="false"
+            android:screenOrientation="landscape">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".ModeChoiceActivity"
-            android:screenOrientation="landscape"
-            android:exported="true">
-
+            android:exported="false"
+            android:screenOrientation="landscape">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

@@ -60,7 +60,7 @@
         app:layout_constraintWidth_percent="0.5" />
 
     <Button
-        android:id="@+id/logOutInControlled"
+        android:id="@+id/logoutButtonInControlled"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:backgroundTint="#F44336"
