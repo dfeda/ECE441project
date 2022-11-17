@@ -32,7 +32,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void attemptLogin() {
-        if((userUsername.getText().toString().equals("dfeda")) && userPassword.getText().toString().equals("S@mp1ePassword")) {
+        if((userUsername.getText().toString().equals("a")) && userPassword.getText().toString().equals("a")) {
             Toast.makeText(getApplicationContext(), "Login successful", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(this, ModeChoiceActivity.class);
             startActivity(intent);

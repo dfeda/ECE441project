@@ -33,18 +33,18 @@
         app:layout_constraintBottom_toTopOf="@+id/progressBar3"
         app:layout_constraintStart_toStartOf="@+id/progressBar" />
 
-    <ImageView
-        android:id="@+id/imageView"
+    <VideoView
+        android:id="@+id/cameraOutputControlled"
         android:layout_width="0dp"
-        app:layout_constraintWidth_default="percent"
-        app:layout_constraintWidth_percent="0.6"
         android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_default="percent"
         app:layout_constraintHeight_percent="0.6"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logOutInControlled"
+        app:layout_constraintTop_toBottomOf="@+id/autonomousButtonInControlled"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.6"
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
     <Button
@@ -76,17 +76,17 @@
         android:layout_height="55dp"
         android:rotation="180"
         app:layout_constraintBottom_toBottomOf="@+id/imageButton9"
-        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/cameraOutputControlled"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/autonomousButtonInControlled"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/cameraOutputAutonomous"
         android:layout_width="60dp"
         android:layout_height="55dp"
         app:layout_constraintBottom_toTopOf="@+id/imageButton2"
-        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/cameraOutputControlled"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/autonomousButtonInControlled"
         app:layout_constraintVertical_bias="1.0"
@@ -98,7 +98,7 @@
         android:layout_height="55dp"
         android:layout_marginStart="10dp"
         android:rotation="270"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/cameraOutputControlled"
         app:layout_constraintTop_toTopOf="@+id/imageButton4"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
@@ -112,15 +112,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageButton3"
-        app:layout_constraintTop_toBottomOf="@+id/logOutInControlled"
+        app:layout_constraintTop_toBottomOf="@+id/logoutButtonInControlled"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
     <ImageButton
         android:id="@+id/imageButton9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintBottom_toBottomOf="@+id/cameraOutputControlled"
+        app:layout_constraintEnd_toStartOf="@+id/cameraOutputControlled"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@android:drawable/ic_lock_silent_mode_off" />
 
@@ -128,9 +128,9 @@
         android:id="@+id/imageButton10"
         android:layout_width="66dp"
         android:layout_height="51dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintBottom_toBottomOf="@+id/cameraOutputControlled"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/cameraOutputControlled"
         app:srcCompat="@android:drawable/ic_lock_idle_alarm" />
 
     <ProgressBar
@@ -140,8 +140,8 @@
         android:layout_height="14dp"
         android:progress="20"
         app:layout_constraintBottom_toTopOf="@+id/progressBar2"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/cameraOutputControlled"
+        app:layout_constraintTop_toBottomOf="@+id/cameraOutputControlled"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
